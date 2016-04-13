@@ -46,6 +46,10 @@ export default Ember.Component.extend({
       options.grabCursor = true;
     }
 
+    if (this.get('initialSlide')) {
+      options.initialSlide = this.get('initialSlide');
+    }
+
     options.onSlideChangeEnd = this.slideChanged.bind(this);
 
     return options;
